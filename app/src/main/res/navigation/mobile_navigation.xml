@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="co.example.basicenglish.ui.home.HomeFragment"
+        android:label="@string/bottom_menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_vocabulary"
+            app:destination="@id/navigation_vocabulary" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_vocabulary"
+        android:name="co.example.basicenglish.ui.vocabulary.VocabularyFragment"
+        android:label="@string/bottom_menu_vocabulary"
+        tools:layout="@layout/fragment_vocabulary_sentence" >
+        <action
+            android:id="@+id/action_navigation_vocabulary_to_navigation_sentence"
+            app:destination="@id/navigation_sentence" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_sentence"
+        android:name="co.example.basicenglish.ui.sentence.SentenceFragment"
+        android:label="@string/bottom_menu_sentence"
+        tools:layout="@layout/fragment_vocabulary_sentence" >
+        <action
+            android:id="@+id/action_navigation_sentence_to_navigation_pronunciation"
+            app:destination="@id/navigation_pronunciation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_pronunciation"
+        android:name="co.example.basicenglish.ui.pronunciation.PronunciationFragment"
+        android:label="@string/bottom_menu_pronunciation"
+        tools:layout="@layout/fragment_pronunciation" >
+        <action
+            android:id="@+id/action_navigation_pronunciation_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+
+
+
+
+</navigation>
