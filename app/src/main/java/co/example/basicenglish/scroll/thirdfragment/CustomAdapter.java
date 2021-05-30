@@ -53,7 +53,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomHold
     }
 
     public static class CustomHolder extends RecyclerView.ViewHolder {
-
+        
+        //holderı bind içine yazabiliriz ?
+       
         TextView textView;
         ImageView imageView;
 
